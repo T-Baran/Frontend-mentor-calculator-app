@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg: hsl(0, 0%, 90%);
+  --bg-keypad: hsl(0, 5%, 81%);
+  --bg-scr: hsl(0, 0%, 93%);
+  --key-bg: hsl(185, 42%, 37%);
+  --key-shd: hsl(185, 58%, 25%);
+  --key-bg-tog: hsl(25, 98%, 40%);
+  --key-shd: hsl(25, 99%, 27%);
+  --key-bg-secondary: hsl(45, 7%, 89%);
+  --key-shd-secondary: hsl(35, 11%, 61%);
+  --text: hsl(60, 10%, 19%);
+  --text-secondary: hsl(0, 0, 100%);
+  //my added colors
+  --text-white: hsl(0, 0, 100%);
+  --text-theme: hsl(60, 10%, 19%);
+  --bg-theme: hsl(35, 7%, 64%);
+
+  --hover-effect: brightness(0.9);
+}
+[data-theme="dark"] {
+  --bg: hsl(222, 26%, 31%);
+  --bg-keypad: hsl(223, 31%, 20%);
+  --bg-scr: hsl(224, 36%, 15%);
+  --key-bg: hsl(225, 21%, 49%);
+  --key-shd: hsl(224, 28%, 35%);
+  --key-bg-tog: hsl(6, 63%, 50%);
+  --key-shd: hsl(6, 70%, 34%);
+  --key-bg-secondary: hsl(30, 25%, 89%);
+  --key-shd-secondary: hsl(28, 16%, 65%);
+  --text: hsl(221, 14%, 31%);
+  --text-secondary: hsl(0, 0, 100%);
+  //my added colors
+  --text-white: hsl(0, 0, 100%);
+  --text-theme: #fff;
+  --bg-theme: hsl(224, 36%, 15%);
+  --hover-effect: brightness(0.9);
+}
+[data-theme="contrast"] {
+  --bg: hsl(268, 75%, 9%);
+  --bg-keypad: hsl(268, 71%, 12%);
+  --bg-scr: hsl(268, 71%, 12%);
+  --key-bg: hsl(281, 89%, 26%);
+  --key-shd: hsl(285, 91%, 52%);
+  --key-bg-tog: hsl(176, 100%, 44%);
+  --key-shd: hsl(177, 92%, 70%);
+  --key-bg-secondary: hsl(268, 47%, 21%);
+  --key-shd-secondary: hsl(290, 70%, 36%);
+  --text: hsl(52, 100%, 62%);
+  --text-secondary: hsl(198, 20%, 13%);
+  //my added colors
+  --text-white: hsl(0, 0, 100%);
+  --text-theme: hsl(52, 100%, 62%);
+  --bg-theme: hsl(267, 55%, 16%);
+  --hover-effect: brightness(0.9);
+}
+//fighting with theme switcher START
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+
+  & * {
+    color: var(--text-theme);
+  }
+}
+.switch-wrapper {
+  background-color: var(--bg-theme);
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  .theme-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: -22px;
+      left: 3px;
+    }
+
+    .switch-button {
+      appearance: none;
+      margin: 0;
+      width: 14px;
+      height: 14px;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--bg-theme);
+
+      &:checked {
+        background-color: var(--key-bg-tog);
+      }
+    }
+  }
+}
+
+//fighting with theme switcher END
+body {
+  background-color: var(--bg);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container {
+  width: Min(90vw, 600px);
+  height: 75vh;
+}
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
