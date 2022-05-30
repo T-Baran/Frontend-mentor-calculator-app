@@ -30,3 +30,11 @@ if (currentTheme) {
     contrast.checked = true;
   }
 }
+
+const buttonNumber = document.querySelectorAll("[data-number]");
+const buttonOperation = document.querySelectorAll("[data-operation");
+const buttonEqual = document.querySelector("[data-equals]");
+const buttonDelete = document.querySelector("[data-delete]");
+const buttonClear = document.querySelector("[data-clear]");
+const previousDataTextElement = document.querySelector("[data-previous-data]");
+const currentDataTextElement = document.querySelector("[data-current-data]");
