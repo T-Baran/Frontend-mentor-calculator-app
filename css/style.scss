@@ -145,15 +145,21 @@ body {
   width: 100%;
   height: 15vh;
   display: flex;
-  align-items: center;
-  justify-content: end;
+  align-items: end;
+  justify-content: space-around;
+  flex-direction: column;
   background-color: var(--bg-scr);
   border-radius: 10px;
   margin-bottom: 3vh;
   padding: 10px;
+  text-align: right;
+  overflow: hidden;
   p {
-    font-size: 4rem;
+    font-size: 2rem;
     color: var(--text-calc);
+  }
+  #screen {
+    font-size: 3rem;
   }
 }
 .bottom-container {
